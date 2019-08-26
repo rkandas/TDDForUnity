@@ -13,7 +13,7 @@ namespace Tests
     public class AssetSpawnerTest 
     {
         [UnityTest]
-        public IEnumerator Should_InstantiateCubeOnePrefab_When_GivenStringHasCube()
+        public IEnumerator Should_InstantiateObject_When_GivenStringHasNameAndPosition()
         {
             //given 
             // mock the CSV reader
