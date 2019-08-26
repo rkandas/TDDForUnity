@@ -1,0 +1,13 @@
+﻿{
+    "name": "Tests",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "references": [
+        "TDDForUnity",
+        "NSubstitute"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
