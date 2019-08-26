@@ -18,7 +18,8 @@ namespace Tests
             //given 
             // mock the CSV reader
             var reader = Substitute.For<ICsvReader>();
-            reader.ReadNextLine().Returns("Cube,2,3,3");
+            reader.ReadNextLine().Returns("CubeX,2,3,3");
+            String expectedName = "CubeX";
             
             String csvString =  reader.ReadNextLine();
             Vector3 expectedCoordinate = new Vector3(2f,3f,3f);
@@ -28,7 +29,7 @@ namespace Tests
             assetSpawner.createAGameObjectFromString(csvString);
             
             //then
-            GameObject obj = GameObject.Find("CubeOne");
+            GameObject obj = GameObject.Find(expectedName);
             Assert.IsNotNull(obj);
             Assert.AreEqual(expectedCoordinate, obj.transform.position);
             yield return null;
